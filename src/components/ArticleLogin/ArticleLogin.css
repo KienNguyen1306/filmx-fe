@@ -1,0 +1,33 @@
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login form {
+  padding: 30px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.75);
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login .login_controll {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.login_controll label {
+  color: #fff;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+.login_controll input {
+  background-color: #1f1c19;
+  color: #fff;
+  outline: none;
+  padding: 10px;
+  border-radius: 4px;
+}

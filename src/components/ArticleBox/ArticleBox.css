@@ -1,0 +1,42 @@
+.box {
+  padding: 10px 10px;
+}
+.box .container {
+  background-color: #1e2024;
+
+  border-radius: 10px;
+}
+.box-list {
+}
+.box-list ul {
+  margin-top: 0px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.2s linear;
+}
+.box-list.show ul {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  height: auto;
+  overflow: hidden;
+  transition: all 0.2s linear;
+  padding: 10px;
+}
+.box-list-item {
+  background-color: #1e2024;
+  padding: 5px 10px;
+  border: 0.5px solid #ccc;
+  border-radius: 4px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.box-list-item a {
+  color: #ccc;
+}

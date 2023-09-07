@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;900&display=swap");
+
+:root {
+  --black-color: #1e2024;
+  --text-color: #fff;
+  --back-color: #24262b;
+  --icon-color: #d1a110;
+}
+
+.app {
+  width: 100%;
+  background-color: var(--back-color);
+}
+.admin {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  /* background-image: url("../image/background-login.jpg"); */
+  background-image: url("../image/background-login.jpg"),
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.8) 0,
+      rgba(0, 0, 0, 0) 60%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.container {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+html {
+  box-sizing: border-box;
+
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  font-size: 62.5%;
+}
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
