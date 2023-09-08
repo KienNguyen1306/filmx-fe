@@ -44,7 +44,11 @@ function movieReducer(state = initState, action) {
     case ACT_FETCH_MOVIE_DETAIL:
       return { ...state, movieDetail: action.payload };
     case ACT_FETCH_MOVIE_RELATE:
-      return { ...state, movieRelate: action.payload };
+      return {
+        ...state,
+        listMovie: { ...state.listMovie, loading: false },
+        movieRelate: action.payload,
+      };
     case SET_PRODUCT_TYPE:
       return {
         ...state,
