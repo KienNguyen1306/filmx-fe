@@ -14,7 +14,7 @@ function App() {
     dispatch(actFetchAllActorAsync());
   }, [dispatch]);
   const handleContextMenu = (e) => {
-    e.preventDefault(); // Ngăn chặn hành động chuột phải mặc định
+    // e.preventDefault(); // Ngăn chặn hành động chuột phải mặc định
   };
 
   return (

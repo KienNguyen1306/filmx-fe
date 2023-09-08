@@ -7,7 +7,7 @@ import {
 } from "./action";
 
 const initState = {
-  listMovie: { lists: [], currenPage: 0, totalpages: 0 },
+  listMovie: { lists: [], currenPage: 0, totalpages: 0, loading: true },
   movieSearch: { lists: [], currenPage: 0, totalpages: 0 },
   movieDetail: {},
   movieRelate: [],
@@ -26,6 +26,7 @@ function movieReducer(state = initState, action) {
               : [...state.listMovie.lists, ...action.payload.movies],
           currenPage: action.payload.currenPage,
           totalpages: action.payload.totalpages,
+          loading: false,
         },
       };
     case ACT_FETCH_MOVIE_SEARCH:
@@ -47,6 +48,7 @@ function movieReducer(state = initState, action) {
     case SET_PRODUCT_TYPE:
       return {
         ...state,
+        listMovie: { lists: [], currenPage: 0, totalpages: 0, loading: true },
         type: {
           name: action.payload.type,
           id: action.payload.id,

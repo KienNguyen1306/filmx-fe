@@ -6,7 +6,7 @@ import { useEffect } from "react";
 function HomePage() {
   const { lists } = useSelector((state) => state.MOVIE.listMovie);
   const { name, id } = useSelector((state) => state.MOVIE.type);
-  const { currenPage, totalpages } = useSelector(
+  const { currenPage, totalpages, loading } = useSelector(
     (state) => state.MOVIE.listMovie
   );
   const dispatch = useDispatch();
@@ -17,7 +17,7 @@ function HomePage() {
 
   useEffect(() => {
     dispatch(actFetchAllMovieAsync({ type: name, id }));
-  }, [name, id, dispatch]);
+  }, [name, id, loading, dispatch]);
 
   return (
     <div className="list_movie">

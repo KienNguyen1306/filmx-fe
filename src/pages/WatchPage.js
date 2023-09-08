@@ -13,10 +13,11 @@ function WatchPage() {
   let relateData = useSelector((state) => state.MOVIE.movieRelate);
   let movieDetail = useSelector((state) => state.MOVIE.movieDetail);
 
+  console.log("movieID", movieID);
   useEffect(() => {
     dispatch(actFetchMovieDetailAsync(movieID));
     dispatch(actFetchMovieRelateAsync(movieID));
-  }, [movieID]);
+  }, [dispatch, movieID]);
 
   useEffect(() => {
     window.scrollTo({
@@ -24,6 +25,7 @@ function WatchPage() {
       behavior: "smooth",
     });
   }, [movieID]);
+
   return (
     <div>
       <ArticleWatch linkVideo={movieDetail.videoUrl} />

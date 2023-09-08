@@ -2,3 +2,16 @@
   width: 100% !important;
   height: 80vh !important;
 }
+@media only screen and (max-width: 900px) {
+  .VideoPlayer {
+    width: 100% !important;
+    height: 45vh !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .VideoPlayer {
+    width: 100% !important;
+    height: 45vh !important;
+  }
+}
