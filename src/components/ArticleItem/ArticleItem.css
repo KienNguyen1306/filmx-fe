@@ -19,14 +19,16 @@
   left: 0px;
   background-color: red;
   color: #fff;
-  padding: 2px 5px;
+  padding: 5px 12px;
   border-bottom-right-radius: 8px;
   border-top-left-radius: 5px;
   font-size: 14px;
 }
 .name {
   color: #fff;
-  margin: 5px 0;
+  margin: 10px 0;
+  height: 22px;
+  line-height: 1.4;
   transition: all 0.2s linear;
 }
 

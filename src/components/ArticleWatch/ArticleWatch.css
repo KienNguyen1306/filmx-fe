@@ -8,3 +8,22 @@
 }
 .body {
 }
+
+.play iframe{
+  width: 100% !important;
+  height: 70vh !important;
+}
+
+@media only screen and (max-width: 900px) {
+  .play iframe{
+    width: 100% !important;
+    height: 50vh !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .play iframe{
+    width: 100% !important;
+    height: 50vh !important;
+  }
+}

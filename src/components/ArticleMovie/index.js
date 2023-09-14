@@ -24,18 +24,7 @@ function ArticleMovie({ data }) {
     );
   }
 
-  // if (data.length === 0) {
-  //   return (
-  //     <div className="list_movie">
-  //       <div className="container">
-  //         <MainTitle>{title}</MainTitle>
-  //         <div className="movie">
-  //           <div className="no_movie">Không có video</div>
-  //         </div>
-  //       </div>
-  //     </div>
-  //   );
-  // }
+
 
   return (
     <div className="list_movie">
