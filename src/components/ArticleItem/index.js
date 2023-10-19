@@ -1,17 +1,32 @@
-import { useNavigate } from "react-router-dom";
-
+import { Link } from "react-router-dom";
+import { GrFormView } from "react-icons/gr";
 import "./ArticleItem.css";
-function ArticleItem({ data }) {
-  const navigate = useNavigate();
+import MovieService from "../../services/movieServices";
+function ArticleItem({ data, highlightSearch }) {
   function handlewatch() {
-    navigate(`/watch/${data.id}`);
+    MovieService.postViewMovie(data.id);
   }
+
   return (
-    <div className="item" onClick={handlewatch}>
-      <img className="image" src={data.imageUrl} alt="sda" />
+    <Link to={`/watch/${data.id}`} className="item" onClick={handlewatch}>
+      <img className="image" src={data.imageUrl} alt="phim sex" loading="lazy" />
       <span className="genre">{data.Country.name}</span>
-      <p className="name line-clamp">{data.name}</p>
-    </div>
+      <span className="view">
+        {data.view} <GrFormView className="icon" />
+      </span>
+      {highlightSearch ? (
+        <p
+          className="name line-clamp"
+          dangerouslySetInnerHTML={{ __html: highlightSearch(data.name) }}
+        />
+      ) : (
+        <p
+          className="name line-clamp"
+        >
+          {data.name}
+        </p>
+      )}
+    </Link>
   );
 }
 

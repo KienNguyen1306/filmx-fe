@@ -1,29 +1,103 @@
+.watch-container{
+  padding: 0 10px;
+}
 .watch {
   margin: 20px 0;
+  width: 100%;
 }
 .watch .container {
   background-color: var(--back-color);
-  border: 1px solid var(--icon-color);
   border-radius: 5px;
 }
-.body {
+ .movie_play{
+  display: flex;
+  background-color: #1e2024;
+  justify-content: space-between;
+}
+.movie_play .info{
+  flex: 1;
+  height: 100%;
+  padding: 20px 10px;
+}
+.movie_play .info li{
+  line-height: 1.4;
+  color: #ffff;
+}
+.movie_play .info li span{
+  color: #d1a110;
+  margin-left: 4px;
+  text-transform: inherit;
+  cursor: pointer;
 }
 
-.play iframe{
-  width: 100% !important;
-  height: 70vh !important;
+
+
+.watch .warring{
+  color: red;
+  padding: 2px 0;
+  padding-left: 8px;
+  background-color: #ffff;
+  margin-bottom: 20px;
+  border-radius: 5px;
 }
+.watch .warring h3{
+  line-height: 1.4;
+}
+.wapper1{
+  width: 640px;
+  position: relative;
+  padding-bottom: 360px; 
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.wapper1 .iframe{
+  position: absolute;
+  top:0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+
 
 @media only screen and (max-width: 900px) {
-  .play iframe{
-    width: 100% !important;
-    height: 50vh !important;
+ 
+  .movie_play{
+    flex-direction: column-reverse;
   }
+  
+  
 }
 
-@media only screen and (max-width: 600px) {
-  .play iframe{
-    width: 100% !important;
-    height: 50vh !important;
+@media only screen and (max-width: 650px) {
+  .wapper1{
+   
+    padding-bottom: 56.25%; 
+    
   }
+ 
 }
+/* @media only screen and (max-width: 798px) {
+  .movie_play{
+    flex-direction: column-reverse;
+   }
+  
+ 
+}
+@media only screen and (max-width: 700px) {
+  .movie_play{
+    flex-direction: column-reverse;
+   }
+ 
+}
+
+@media only screen and (max-width: 400px) {
+  
+} */
+

@@ -4,14 +4,16 @@ import {
   ACT_FETCH_MOVIE_RELATE,
   ACT_FETCH_MOVIE_SEARCH,
   SET_PRODUCT_TYPE,
+  SET_RELOAD,
 } from "./action";
 
 const initState = {
-  listMovie: { lists: [], currenPage: 0, totalpages: 0, loading: true },
-  movieSearch: { lists: [], currenPage: 0, totalpages: 0 },
+  listMovie: { lists: [], currenPage: 1, totalpages: 0, loading: true },
+  movieSearch: { lists: [], currenPage: 1, totalpages: 0 ,loading: true,check:1},
   movieDetail: {},
   movieRelate: [],
   type: { name: "all", id: 0, title: "Phim mới cập nhập" },
+  reload:0
 };
 
 function movieReducer(state = initState, action) {
@@ -35,10 +37,12 @@ function movieReducer(state = initState, action) {
         movieSearch: {
           lists:
             action.payload.currenPage === 1
-              ? action.payload.movies
+              ? state.movieSearch.check ===1?action.payload.movies:[...state.movieSearch.lists]
               : [...state.movieSearch.lists, ...action.payload.movies],
           currenPage: action.payload.currenPage,
           totalpages: action.payload.totalpages,
+          check:action.payload.check,
+          loading: false,
         },
       };
     case ACT_FETCH_MOVIE_DETAIL:
@@ -58,6 +62,11 @@ function movieReducer(state = initState, action) {
           id: action.payload.id,
           title: action.payload.title,
         },
+      };
+      case SET_RELOAD:
+      return {
+        ...state,
+       reload:action.payload
       };
     default:
       return state;

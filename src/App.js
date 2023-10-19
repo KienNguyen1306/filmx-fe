@@ -17,6 +17,7 @@ function App() {
     // e.preventDefault(); // Ngăn chặn hành động chuột phải mặc định
   };
 
+
   return (
     <div onContextMenu={handleContextMenu}>
       <BrowserRouter>

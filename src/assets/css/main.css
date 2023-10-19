@@ -37,13 +37,12 @@
 }
 
 html {
+  font-size: 62.5%;
   box-sizing: border-box;
-
   font-family: "Poppins", sans-serif;
 }
 
 body {
-  font-size: 62.5%;
 }
 
 .line-clamp {
@@ -51,4 +50,63 @@ body {
   -webkit-line-clamp: var(--line-clamp, 1);
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+
+
+/* ====================================== */
+.lds-dual-ring {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  position: relative;
+}
+.lds-dual-ring:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #131212 transparent #111010 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.h1{
+  color: #fff;
+  padding: 10px;
+  background-color: #1e2024;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+.h1 a{
+  color: #d1a110;
+}
+
+.ab{
+  display: flex;
+  justify-content: center;
+}
+
+.link-home{
+  color: #d1a110;
+  padding: 10px;
+  background-color: #1e2024;
+  display: block;
+  margin-bottom: 20px;
+  border-radius: 5px;
+text-align: center;
+font-size: 18px;
 }

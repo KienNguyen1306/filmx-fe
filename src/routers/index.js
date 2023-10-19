@@ -2,11 +2,17 @@ import WatchPage from "../pages/WatchPage";
 import SearchPage from "../pages/SearchPage";
 import HomePage from "../pages/Homepage";
 import AdminPage from "../pages/AdminPage";
+import CaterogyPage from "../pages/CaterogyPage";
+
 
 const dataRouter = [
   {
     path: "/",
     element: HomePage,
+  },
+  {
+    path: "/caterogy/:id",
+    element: CaterogyPage,
   },
   {
     path: "/search",

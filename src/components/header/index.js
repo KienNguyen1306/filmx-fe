@@ -25,7 +25,7 @@ function Header() {
         <div className="body">
           <div className="logo">
             <Link to="/" onClick={handleSetType}>
-              PHIMHAY
+              FILMSEXHD
             </Link>
           </div>
           <div className="search">

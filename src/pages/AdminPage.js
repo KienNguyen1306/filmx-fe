@@ -2,9 +2,9 @@ import ArticleLogin from "../components/ArticleLogin";
 
 function AdminPage() {
   return (
-    <div className="admin">
+    <article className="admin">
       <ArticleLogin />
-    </div>
+    </article>
   );
 }
 

@@ -5,32 +5,41 @@ import "./ArticleBox.css";
 import { useState } from "react";
 function ArticleBox({ data, children, onClick, type }) {
   const [show, setShow] = useState(false);
+  const [active, setActive] = useState(null);
+
 
   function handleShow() {
     setShow(!show);
   }
 
+  function handleActive(index){
+    setActive(index)
+  }
   return (
     <div className="box">
       <div className="container">
         <MainTitle Icon size="smoll" isCon={show} onClick={handleShow}>
           {children}
         </MainTitle>
-        <div className={`box-list ${show ? "show" : ""}`}>
+        <nav className={`box-list ${show ? "show" : ""}`}>
           <ul>
             {data.map((item) => {
               return (
+                // <ArticleBoxItem item={item} onClick={onClick} type={type}/>
                 <li
                   key={item.id}
-                  className="box-list-item"
-                  onClick={() => onClick(type, item.id, item.name)}
+                  className={`box-list-item ${active === item.id ? 'active':''} `}
+                  onClick={() => {
+                    onClick(type, item.id, item.name)
+                    handleActive(item.id)
+                  } }
                 >
-                  <Link to="/">{item.name}</Link>
+                  <Link to={`/caterogy/${item.id}`}>{item.name}</Link>
                 </li>
               );
             })}
           </ul>
-        </div>
+        </nav>
       </div>
     </div>
   );

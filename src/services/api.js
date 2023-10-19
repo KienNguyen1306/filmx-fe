@@ -3,7 +3,7 @@ import axios from "axios";
 const API = {
   call: function () {
     return axios.create({
-      baseURL: "https://backend-filmx.onrender.com/",
+      baseURL: "https://cdn.filmsexhd.com/",
     });
   },
   callWithToken: function () {

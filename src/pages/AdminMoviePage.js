@@ -1,5 +1,5 @@
 function AdminMoviePage() {
-  return <div className="admin_movie"></div>;
+  return <article className="admin_movie"></article>;
 }
 
 export default AdminMoviePage;

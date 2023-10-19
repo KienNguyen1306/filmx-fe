@@ -1,0 +1,23 @@
+.habtag{
+    margin-top: 20px;
+}
+.habtag-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.habtab-item{
+    color: aqua;
+    position: relative;
+}
+
+.habtab-item::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 1px;
+    height: 100%;
+    background-color: #fff;
+}

@@ -1,24 +1,28 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": " Phim Sex, Phim Sex việt Xem Phim Sex Tuyển Chọn Mới Nhất 2023",
+  "name": "Xem phim sex có nội dung cốt truyện hay và hấp dẫn nhất được filmsexhd tuyển chọn, cập nhật mỗi ngày",
   "icons": [
     {
       "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "type": "image/x-icon",
+      "purpose": "any maskable"
     },
     {
       "src": "logo192.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x192",
+      "purpose": "any maskable"
     },
     {
       "src": "logo512.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "purpose": "any maskable"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
+  "description": "Xem phim sex có nội dung cốt truyện hay và hấp dẫn nhất được filmsexhd tuyển chọn, cập nhật mỗi ngày. Tuyển chọn những bộ phim sex cực nhanh, xem phim sex chất lượng cao địt gái xinh cực sướng, ngày nào cũng có phim sex mới cho anh em xem với tốc độ cao. Phim sex HD mới nhất cập nhật tuyển chọn jav mỗi ngày, xem sex lồn ngon miễn phí nhanh chất lượng full hd. Tuyển tập jav chất nhất, đa dạng thể loại phim",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"

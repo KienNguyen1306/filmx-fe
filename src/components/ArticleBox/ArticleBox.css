@@ -6,8 +6,7 @@
 
   border-radius: 10px;
 }
-.box-list {
-}
+
 .box-list ul {
   margin-top: 0px;
   display: flex;
@@ -32,12 +31,23 @@
   background-color: #1e2024;
   border: 0.2px solid #ccc;
   border-radius: 4px;
-  color: #ccc;
+  
   cursor: pointer;
   padding: 2px 10px;
 }
 
+.box-list-item.active{
+  background-color: var(--icon-color);
+  border-color: var(--icon-color);
+  transition: all 0.2s linear;
+}
+.box-list-item.active a{
+  color: black;
+}
 .box-list-item a {
-  color: #ccc;
+ 
   font-size: 12px;
+  text-transform: capitalize;
+  color: var(--icon-color);
+
 }

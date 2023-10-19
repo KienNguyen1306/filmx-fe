@@ -19,8 +19,10 @@ const MovieService = {
     return API.call().get(`/movies/search?q=${q}&page=${page}`);
   },
   getMovieDetail: function (movieID) {
-    console.log("mìi", movieID);
     return API.call().get(`/movies/${movieID}`);
+  },
+  postViewMovie: function (movieID) {
+    return API.call().post(`/movies/increase-view/${movieID}`);
   },
 };
 

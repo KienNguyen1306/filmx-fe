@@ -7,13 +7,13 @@ import {
   actFetchMovieDetailAsync,
   actFetchMovieRelateAsync,
 } from "../store/movie/action";
+import ArticleComment from "../components/ArticleComment";
+import { Helmet } from "react-helmet";
 function WatchPage() {
   let { movieID } = useParams();
   const dispatch = useDispatch();
   let relateData = useSelector((state) => state.MOVIE.movieRelate);
   let movieDetail = useSelector((state) => state.MOVIE.movieDetail);
-
-  console.log("movieID", movieID);
   useEffect(() => {
     dispatch(actFetchMovieDetailAsync(movieID));
     dispatch(actFetchMovieRelateAsync(movieID));
@@ -27,10 +27,18 @@ function WatchPage() {
   }, [movieID]);
 
   return (
-    <div>
-      <ArticleWatch linkVideo={movieDetail.videoUrl} />
-      <ArticleMovie data={relateData} title="Phim liên quan" />
-    </div>
+    <>
+      <Helmet>
+        <title>{movieDetail?.name}</title>
+        <link rel="canonical" href={`https://filmsexhd.com/watch/${movieDetail.id}`} />
+
+      </Helmet>
+      <article className="watch-container">
+        <ArticleWatch data={movieDetail} />
+        {/* <ArticleComment/> */}
+        <ArticleMovie data={relateData} title="Phim liên quan" />
+      </article>
+    </>
   );
 }
 

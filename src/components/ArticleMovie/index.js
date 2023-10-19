@@ -5,9 +5,9 @@ import MainTitle from "../shared/MainTitle";
 
 import "./ArticleMovie.css";
 
-function ArticleMovie({ data }) {
+function ArticleMovie({ data ,loading,highlightSearch}) {
   const { title } = useSelector((state) => state.MOVIE.type);
-  const { loading } = useSelector((state) => state.MOVIE.listMovie);
+  // const { loading } = useSelector((state) => state.MOVIE.listMovie);
 
   if (loading) {
     return (
@@ -24,8 +24,6 @@ function ArticleMovie({ data }) {
     );
   }
 
-
-
   return (
     <div className="list_movie">
       <div className="container">
@@ -37,7 +35,7 @@ function ArticleMovie({ data }) {
         ) : (
           <div className="body">
             {data.map((item) => {
-              return <ArticleItem key={item.id} data={item} />;
+              return <ArticleItem key={item.id} data={item} highlightSearch={highlightSearch}/>;
             })}
           </div>
         )}

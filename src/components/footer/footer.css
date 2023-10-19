@@ -9,3 +9,30 @@
   text-align: center;
   font-size: 14px;
 }
+
+.footer .h1{
+  color: var( --icon-color);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.footer .sub{
+  margin: 0 auto 20px auto;
+  line-height: 1.4;
+  width: 70%;
+}
+
+.footer .cpace{
+  width: 50%;
+  height: 1px;
+  background-color: var(--icon-color);
+  margin: 0 auto 20px auto;
+}
+
+.footer .Copyright{
+  font-size: 15px;
+}
+
+.footer .Copyright span{
+  color: var(--icon-color);
+}

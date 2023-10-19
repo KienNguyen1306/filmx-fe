@@ -5,7 +5,7 @@ import Button from "../components/shared/Button";
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 
-function HomePage() {
+function CaterogyPage() {
   const { lists } = useSelector((state) => state.MOVIE.listMovie);
   const { name, id } = useSelector((state) => state.MOVIE.type);
   const reload = useSelector((state) => state.MOVIE.reload);
@@ -59,4 +59,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default CaterogyPage;
