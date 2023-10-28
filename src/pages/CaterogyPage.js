@@ -1,14 +1,18 @@
-import { useDispatch, useSelector } from "react-redux";
-import ArticleMovie from "../components/ArticleMovie";
-import { actFetchAllMovieAsync, setReload } from "../store/movie/action";
-import Button from "../components/shared/Button";
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
+import { useDispatch, useSelector } from "react-redux";
+import { useLocation } from "react-router-dom";
+import ArticleMovie from "../components/ArticleMovie";
+import Button from "../components/shared/Button";
+import { actFetchAllMovieAsync, setReload } from "../store/movie/action";
 
 function CaterogyPage() {
   const { lists } = useSelector((state) => state.MOVIE.listMovie);
   const { name, id } = useSelector((state) => state.MOVIE.type);
   const reload = useSelector((state) => state.MOVIE.reload);
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const type = queryParams.get("type");
 
   const [loadingMore, setLoadingMore] = useState(false);
 
@@ -36,9 +40,7 @@ function CaterogyPage() {
   return (
     <>
       <Helmet>
-        <title>
-        Phim Sex, Phim Sex Tuyển Chọn Mới Nhất 2023 - filmsexhd.com
-        </title>
+        <title>{type}</title>
         <link rel="canonical" href="https://filmsexhd.com" />
       </Helmet>
       <article className="list_movie">

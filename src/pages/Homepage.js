@@ -1,12 +1,14 @@
-import { useDispatch, useSelector } from "react-redux";
-import ArticleMovie from "../components/ArticleMovie";
-import { actFetchAllMovieAsync, setReload } from "../store/movie/action";
-import Button from "../components/shared/Button";
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
+import { useDispatch, useSelector } from "react-redux";
+import ArticleMovie from "../components/ArticleMovie";
+import Button from "../components/shared/Button";
+import { actFetchAllMovieAsync, setReload } from "../store/movie/action";
 
 function HomePage() {
   const { lists } = useSelector((state) => state.MOVIE.listMovie);
+  const {lists:listsTop} = useSelector((state) => state.MOVIE.listMovieTopView);
+
   const { name, id } = useSelector((state) => state.MOVIE.type);
   const reload = useSelector((state) => state.MOVIE.reload);
 
@@ -31,7 +33,7 @@ function HomePage() {
     if (reload === 0) {
       dispatch(actFetchAllMovieAsync({ type: name, id }));
     }
-  }, [name, id, loading, dispatch]);
+  }, [name, id, loading, dispatch,reload]);
 
   return (
     <>
@@ -54,6 +56,9 @@ function HomePage() {
             </>
           )}
         </div>
+      </article>
+      <article className="list_movie">
+        <ArticleMovie data={listsTop} loading={loading} heading='Top phim hay'/>
       </article>
     </>
   );

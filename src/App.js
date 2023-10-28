@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import { actFetchAllGenreAsync } from "./store/genre/action";
 import { actFetchAllCountryAsync } from "./store/country/action";
 import { actFetchAllActorAsync } from "./store/actor/action";
+import 'react-loading-skeleton/dist/skeleton.css'
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {

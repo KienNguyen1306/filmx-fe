@@ -37,12 +37,13 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 65.5%;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
 
 body {
+  font-size: 1.4rem !important;
 }
 
 .line-clamp {
@@ -98,6 +99,7 @@ body {
 .ab{
   display: flex;
   justify-content: center;
+  margin-bottom: 5px;
 }
 
 .link-home{
@@ -108,5 +110,9 @@ body {
   margin-bottom: 20px;
   border-radius: 5px;
 text-align: center;
-font-size: 18px;
+font-size: 1.8rem;
+}
+
+.image .react-loading-skeleton{
+  width: 100% !important;
 }

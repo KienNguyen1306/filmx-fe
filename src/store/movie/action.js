@@ -6,6 +6,7 @@ export const ACT_FETCH_MOVIE_RELATE = "ACT_FETCH_MOVIE_RELATE";
 export const ACT_FETCH_MOVIE_SEARCH = "ACT_FETCH_MOVIE_SEARCH";
 export const SET_PRODUCT_TYPE = "SET_PRODUCT_TYPE";
 export const SET_RELOAD = "SET_RELOAD";
+export const ACT_FETCH_TOP_VIEW = 'ACT_FETCH_TOP_VIEW'
 
 export const setProductType = (type, id, title) => ({
   type: SET_PRODUCT_TYPE,
@@ -85,5 +86,25 @@ export function actFetchMovieRelateAsync(movieID) {
   return async (dispatch) => {
     const response = await MovieService.getMovieRelate(movieID);
     dispatch(actFetchMovieRelate(response.data.relatedMovies));
+  };
+}
+
+
+// get list movie
+export function actFetchMovieTopView(data) {
+  return {
+    type: ACT_FETCH_TOP_VIEW,
+    payload: { data },
+  };
+}
+
+
+
+export function actFetchAllMovieTopViewAsync() {
+  return async (dispatch) => {
+    const response = await MovieService.getAllMovieTopView();
+    let data = response.data;
+    console.log(data)
+    dispatch(actFetchMovieTopView(data));
   };
 }

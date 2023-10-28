@@ -73,12 +73,12 @@ display: flex;
 }
 .name-user{
     margin-bottom: 5px;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 700;
 }
 
 .comment-ti{
-    font-size: 14px;
+    font-size: 1.4rem;
 }
 
 
@@ -97,5 +97,5 @@ display: flex;
     display: block;
     padding: 10px 0;
     margin-bottom: 20px;
-    font-size: 17px;
+    font-size: 1.7rem;
 }

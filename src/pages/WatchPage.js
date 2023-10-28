@@ -26,6 +26,7 @@ function WatchPage() {
     });
   }, [movieID]);
 
+console.log('relateData',relateData)
   return (
     <>
       <Helmet>
@@ -36,7 +37,8 @@ function WatchPage() {
       <article className="watch-container">
         <ArticleWatch data={movieDetail} />
         {/* <ArticleComment/> */}
-        <ArticleMovie data={relateData} title="Phim liên quan" />
+        {relateData.length > 0 && <ArticleMovie data={relateData} title="Phim liên quan" />}
+        
       </article>
     </>
   );

@@ -21,7 +21,7 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 13px;
   height: auto;
   overflow: hidden;
   transition: all 0.2s linear;
@@ -33,7 +33,7 @@
   border-radius: 4px;
   
   cursor: pointer;
-  padding: 2px 10px;
+  padding: 4px 10px;
 }
 
 .box-list-item.active{
@@ -46,7 +46,7 @@
 }
 .box-list-item a {
  
-  font-size: 12px;
+  font-size: 1.3rem;
   text-transform: capitalize;
   color: var(--icon-color);
 

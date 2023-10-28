@@ -34,7 +34,7 @@ function ArticleBox({ data, children, onClick, type }) {
                     handleActive(item.id)
                   } }
                 >
-                  <Link to={`/caterogy/${item.id}`}>{item.name}</Link>
+                  <Link to={`/caterogy/${item.id}?type=${item.name}`}>{item.name}</Link>
                 </li>
               );
             })}

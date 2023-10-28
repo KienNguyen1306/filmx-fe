@@ -12,6 +12,9 @@ const MovieService = {
   getAllMovie: function (url) {
     return API.call().get(url);
   },
+  getAllMovieTopView: function () {
+    return API.call().get('/movies/top-view');
+  },
   getMovieRelate: function (movieID) {
     return API.call().get(`/movies/${movieID}/related`);
   },
